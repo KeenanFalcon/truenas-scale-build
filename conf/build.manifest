@@ -18,6 +18,7 @@ apt-repos:
   - url: https://apt.sys.truenas.net/electriceel/nightlies/debian-backports/
     distribution: bookworm-backports
     component: "main contrib non-free non-free-firmware"
+    key: keys/truenas.gpg
   - url: https://apt.sys.truenas.net/electriceel/nightlies/debian-debug/
     distribution: bookworm-debug
     component: main
@@ -28,6 +29,9 @@ apt-repos:
     distribution: bookworm
     component: stable
     key: keys/docker-ce.gpg
+  - url: https://deb.debian.org/debian/
+    distribution: bookworm-backports
+    component: main
 
 #
 # Packages which are installed into the base TrueNAS SCALE System by default
