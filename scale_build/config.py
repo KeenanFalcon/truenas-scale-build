@@ -50,6 +50,7 @@ VERSION = get_env_variable('TRUENAS_VERSION', str, f'{_VERS}-{BUILD_TIME_OBJ.str
 TRUENAS_VENDOR = get_env_variable('TRUENAS_VENDOR', str)
 PRESERVE_ISO = get_env_variable('PRESERVE_ISO', bool, False)
 
+print("Version of current build is:", f'TrueNAS-SCALE-ElectricEel-{VERSION}')
 
 # We will get branch overrides and identity file path overrides from here
 for k, v in environ.items():
