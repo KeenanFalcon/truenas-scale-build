@@ -26,10 +26,10 @@ apt-repos:
   - url: fangtooth/nightlies/yarn/
     distribution: stable
     component: main
-  - url: fangtooth/nightlies/docker/
+  - url: https://download.docker.com/linux/debian/
     distribution: bookworm
     component: stable
-    key: keys/docker.gpg
+    key: keys/docker-ce.gpg
 
 #
 # Packages which are installed into the base TrueNAS SCALE System by default
