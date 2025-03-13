@@ -57,6 +57,7 @@ class BootstrapDir(CacheMixin, HashMixin):
             f.write(get_apt_preferences())
 
         run(['chroot', self.chroot_basedir, 'apt', 'update'])
+        run(['chroot', self.chroot_basedir, 'apt-cache', 'policy'], log=True)
         # We need to have gnupg installed before adding apt mirrors because apt-key needs it
         run(['chroot', self.chroot_basedir, 'apt', 'install', '-y', 'gnupg'])
 
@@ -78,6 +79,7 @@ class BootstrapDir(CacheMixin, HashMixin):
 
         # Update apt
         run(['chroot', self.chroot_basedir, 'apt', 'update'])
+        run(['chroot', self.chroot_basedir, 'apt-cache', 'policy'], log=True)
         # Upgrade apt so that packages which were pulled in by debootstrap i.e libssl, they also
         # respect the apt preferences we have specified
         run(['chroot', self.chroot_basedir, 'apt', 'upgrade', '-y'])
