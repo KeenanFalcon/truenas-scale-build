@@ -231,6 +231,12 @@ apt_preferences:
 - Package: "*polkit*"
   Pin: "release n=bookworm-security"
   Pin-Priority: 1000
+- Package: "*qemu*"
+  Pin: "release n=bookworm-backports"
+  Pin-Priority: 1000
+- Package: "seabios"
+  Pin: "release n=bookworm-backports"
+  Pin-Priority: 1000
 - Package: "*ssh*"
   Pin: "release n=bookworm-security"
   Pin-Priority: 1000
