@@ -3,7 +3,7 @@
 PARAM=${1:-all}
 
 export TRUENAS_VERSION=25.04-RC.2-Custom
-export TRUENAS_TRAIN="TrueNAS-SCALE-Fangtooth"
+export TRUENAS_TRAIN="TrueNAS-SCALE-Fangtooth-RC"
 export SKIP_SOURCE_REPO_VALIDATION=0
 
 case "$PARAM" in
