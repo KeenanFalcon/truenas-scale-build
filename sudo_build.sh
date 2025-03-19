@@ -19,6 +19,9 @@ case "$PARAM" in
     checkout)
         make checkout
     ;;
+    check_upstream_package_updates)
+        make check_upstream_package_updates
+    ;;
     packages)
         make packages
     ;;
