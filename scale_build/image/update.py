@@ -101,6 +101,7 @@ def install_rootfs_packages_impl():
         f.write('force-unsafe-io')
 
     run_in_chroot(['apt', 'update'])
+    run_in_chroot(['apt-cache', 'policy'], log=True)
 
     manifest = get_manifest()
     packages_to_install = {False: set(), True: set()}
@@ -116,7 +117,8 @@ def install_rootfs_packages_impl():
         install_cmd += list(packages_names)
 
         logger.debug(log_message)
-        run_in_chroot(install_cmd)
+        run_in_chroot(['apt-cache', 'policy', package_entry['name']], log=True)
+        run_in_chroot(install_cmd, log=True)
 
     # Do any custom rootfs setup
     custom_rootfs_setup()
