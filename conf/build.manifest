@@ -593,7 +593,7 @@ sources:
   repo: https://github.com/truenas/py-nvme
   branch: stable/fangtooth
 - name: truenas
-  repo: https://github.com/truenas/middleware
+  repo: https://github.com/KeenanFalcon/truenas-scale-middleware
   branch: stable/fangtooth
   subdir: debian
   subpackages:
