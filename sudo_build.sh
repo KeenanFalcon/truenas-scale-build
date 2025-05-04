@@ -2,7 +2,7 @@
 
 PARAM=${1:-all}
 
-export TRUENAS_VERSION=25.04.0
+export TRUENAS_VERSION=25.04.01
 export TRUENAS_TRAIN="TrueNAS-SCALE-Fangtooth-Custom"
 export SKIP_SOURCE_REPO_VALIDATION=1
 
